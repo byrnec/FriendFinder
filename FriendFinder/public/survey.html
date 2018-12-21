@@ -3,18 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<!-- custom stylesheet -->
-	<link rel="stylesheet" type="text/css" href="/static/survey-styles.css"></style>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<!-- Latest compiled and minified CSS & JS -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   	<script src="https://code.jquery.com/jquery.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<!-- skeleton stylesheet -->
-	<link rel="stylesheet" type="text/css" href="/static/skeleton.css"></style>
-	<!-- google fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Bungee|Ubuntu:300,300i" rel="stylesheet">
+
 	<!-- Chosen -->
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+		
+
+		<link rel="stylesheet" type="text/css" href="assets/style.css"></style>
+
+		
 	<title>Survey Questions</title>
 </head>
 <body>
@@ -140,11 +143,11 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2>Best Match</h2>
+          <h2>Your Best Dating Match</h2>
         </div>
         <div class="modal-body">
           <h3 id="matchName"></h3>
-          <img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+          <img id="matchImg"  alt="">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -219,7 +222,8 @@
         // AJAX post the data to the friends API.
         $.post(currentURL + "/api/friends", userData, function(data) {
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-          $("#matchName").text(data.name);
+					$("#matchName").text(data.name);
+					
           $("#matchImg").attr("src", data.photo);
           // Show the modal with the best match
           $("#resultsModal").modal("toggle");

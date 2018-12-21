@@ -33,11 +33,13 @@ module.exports = function(app){
 		totalDifference = 0;
 	}
 
-	//best match will give the smallest values 
+	//best match will give the smallest values --smallest diff
 	var bestMatch = Friends[allDifferences.indexOf(Math.min.apply(null, allDifferences))];
 
 	res.send(bestMatch);
 	console.log(bestMatch);
+
+	console.log(userData);
 
 	});
 }
