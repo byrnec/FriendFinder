@@ -11,14 +11,8 @@ module.exports = function(app){
   // user submits a form and it submits data to the server.
   app.post('/api/friends', function(req, res){
 
-  // Note the code here. Our "server" will respond to a user"s survey result
-    // Then compare those results against every user in the database.
-    // It will then calculate the difference between each of the numbers and the user"s numbers.
-    // It will then choose the user with the least differences as the "best friend match."
-    // In the case of multiple users with the same result it will choose the first match.
-    // After the test, it will push the user to the database.
   
-    // We will use this object to hold the "best match". We will constantly update it as we
+    // We will use this object to hold the best match. We will constantly update it as we
     // loop through all of the options
     var bestMatch = {
       name: "",
