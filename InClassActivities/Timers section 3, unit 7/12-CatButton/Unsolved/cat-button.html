@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>The Magical Cat Button</title>
+</head>
+
+<body>
+  <button id="cat-button">magical cat button</button>
+  <div id="images">
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // sets up document to listen for the click
+    $("#cat-button").on("click", function() {
+
+      // links the api using the query URL
+      var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cats";
+
+      // does ajax call using GET method to plug into query URL as defined above
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+
+      //  promise function--when we get the response, do this--
+        .then(function(response) { //the word response is totally arbitary-
+
+        // assigns a variable to the image url it is pulling in from the API
+          var imageUrl = response.data.image_original_url;
+
+          // create a new ELEMENT -sets variable with jquery image tag
+          var catImage = $("<img>"); //after our next step this will look like <img src=imageUrl, alt="cat image">
+
+          // gives link attribute to our NEW ELEMENT and alt to cat image
+          catImage.attr("src", imageUrl);
+          catImage.attr("alt", "cat image");
+
+          // this new image will go before the last--PUTS THE NEWEST FIRST
+          $("#images").prepend(catImage);
+        });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+
+<body>
+
+
+
+    <script>
+
+
+        //what you want to do--look at every element of the array, examine each
+        //why you want to do it--to see if there's duplications
+        //how--iterate through the array through the for loop to examine every element
+
+        //two arrays
+        var arrayOne = [10, 6, 7, 8, 3, 2, 1, 6];
+        var arrayTwo = [1, 3, 2, 5, 4, 6, 7, 8, 9, 10];
+
+//Method 2--without a for-loop find dups
+
+//create an empty object
+
+function areDups(array) {
+    //accomplishing same goal as below method 2- to check to see if there are dups
+        var tracker = {}; //tracker is empty, we are checking if the first number in array exists
+
+        //put all of these into our object!! 2: true, 4: false(IF WE'VE SEEN IT BEFORE)
+    for (var i = 0; i < arr.length; i++); {
+        if (tracker[array[i]]) { //if there is no key here, then we go to else //i increments by 1 //it will never return true here unless there is a dup
+        return true 
+        console.log("we found a dup!")
+    } else {
+        tracker[array[i]] = true;
+    }
+
+        }
+        console.log("No dups here!")
+        return false
+
+
+
+
+
+// create a for loop, while examining each,
+for (var i = 0; i < arr.length; i++) {
+
+    // with a nested for loop, compare it against every other element, 
+    for (var j = 0; j < arr.length; j++); {
+        console.log(j !== i && arr[i] === arr[j])
+
+        console.log(j !== i )
+        // except if it is being compared with itself
+        if (j !== i && arr[i] === arr[j]) {
+
+            //return true
+            return true;
+        }
+    }
+}
+return false;
+}
+
+
+// pass arr[i] into object and make it a property of the object
+
+
+        //create a function to check for duplicates
+
+        function checkDups(arr) {
+
+            // create a for loop, while examining each,
+            for (var i = 0; i < arr.length; i++) {
+
+                // with a nested for loop, compare it against every other element, 
+                for (var j = 0; j < arr.length; j++); {
+                    console.log(j !== i && arr[i] === arr[j])
+
+                    console.log(j !== i )
+                    // except if it is being compared with itself
+                    if (j !== i && arr[i] === arr[j]) {
+
+                        //return true
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+       
+
+
+        //execute function
+       console.log(checkDups(arrayOne));
+
+    </script>
+</body>
+
+</html>

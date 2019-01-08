@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bands In Town</title>
+</head>
+
+<body>
+
+  <!-- Artist Select Box -->
+  <form id="artist-form">
+
+    <!-- Label for Text Box -->
+    <label for="artist-input">Choose Your Artist</label>
+
+    <!-- Text Input Box -->
+    <input type="text" id="artist-input"><br>
+
+    <!-- Submit Button -->
+    <input id="select-artist" type="submit" value="GO!">
+  </form>
+
+  <!-- Artist Information -->
+  <div id="artist-div"></div>
+
+</body>
+<!-- 
+ * Using the starter code provided to you, complete the application such that your code will search the Bands In Town API for the artist specified in the search box.
+
+* Bands in Town is a service for finding out when and where bands and artists are scheduled to tour.
+
+* Information on how to use query the Bands In Town API can be found [here](https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0)
+
+* Note: This is a free public API and you will not need to sign up for anything.
+
+* **HINT:** Scroll down the API docs and study the examples. See if you can figure out how to query for an artist's information. You will need to use the `/artists/{artistname} endpoint`.
+
+* **HINT:** The `app_id` parameter described in the docs is required, but can be set to anything you wish.
+ --> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  function searchBandsInTown(artist) {
+    // Add code to query the bands in town api searching for the artist received as an argument to this function
+
+    var queryURL = "https://rest.bandsintown.com/artists/" + artist + "?app_id=codingbootcamp";
+    // Using jQuery, append the following to the #artist-div :
+    // The artist's name
+    $("#artist-div").append(name);
+
+    // The artists thumbnail image
+  
+    var imgURL = response.ThumbURL;
+    $("artist-div").append(thumb_url);
+
+    // The number of fans tracking this artist
+    var tracker_count =
+    // The number of upcoming events for this artist
+    var upcoming_event_count =
+    // A link to the bandsintown url for this artist
+    "https://rest.bandsintown.com/artists/adele?app_id=codingbootcamp"
+    // Note: Append actual HTML elements, not just text
+    var artists = $("<p>").text("Artist" + artistName;
+    artistDiv.append(artists)
+  }
+
+  // Event handler for user clicking the select-artist button
+  $("#select-artist").on("click", function(event) {
+    // Preventing the button from trying to submit the form
+    event.preventDefault();
+    // Storing the artist name
+    var artist = $("#artist-input").val().trim();
+
+    // Running the searchBandsInTown function (passing in the artist as an argument)
+    searchBandsInTown(artist);
+  });
+</script>
+
+</html>

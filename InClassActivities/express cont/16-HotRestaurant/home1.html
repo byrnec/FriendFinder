@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hot Restaurants</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container" style= "text-align: center">
+    <div class="jumbotron">
+      <h1>Hot Restaurant</h1>
+      <h3>We only have 5 tables! Book your seat before they are all gone!</h3>
+      <hr>
+      <a href="/tables">
+        <button class="btn btn-danger btn-lg">
+          <span class="fa fa-eye"></span> View Tables</button>
+      </a>
+      <a href="/reservations">
+        <button class="btn btn-danger btn-lg">
+          <span class="fa fa-th-list"></span> Make Reservation</button>
+      </a>
+    </div>
+    <div class="row">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    // Question: What does this code do?
+    $("#add-btn").on("click", function(event) {
+      event.preventDefault();
+
+      var newReservation = {
+        name: $("#name").val().trim(),
+        role: $("#ID").val().trim(),
+        age: $("#phone").val().trim(),
+        forcePoints: $("#email").val().trim()
+      };
+
+      // Question: What does this code do??
+      $.post("/api/reservations", newReservation)
+        .then(function(data) {
+          console.log(data);
+          alert("Adding restaurant...");
+        });
+
+    });
+
+  </script>
+</body>
+
+</html>

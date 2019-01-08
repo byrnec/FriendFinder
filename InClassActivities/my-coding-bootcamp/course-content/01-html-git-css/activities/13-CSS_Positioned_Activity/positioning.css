@@ -1,0 +1,52 @@
+
+
+section{
+    position: relative;
+    margin: 0 300px;
+    vertical-align: middle;
+}
+
+body{
+    width:600px;
+    color: black;
+    background-color:white;
+    font-family: 'Times New Roman', Times, serif};
+
+
+p{
+    width:600px;
+    line-height: 2;
+}
+
+.box{
+    font-size: xx-large;
+    text-align: center;
+    position: relative;
+    
+
+}
+
+.fixed{
+    position:fixed;
+    background-color: lightgray;
+    width: 300px;
+    height: 100px;
+    z-index: 3;
+    top: 3%;
+    vertical-align: middle;
+}
+.relative{
+    position:relative;
+    background-color: lightgray;
+    width: 600px;
+    height: 300px;
+}
+
+.absolute{
+    position:absolute;
+    background-color: darkgray;
+    width: 250px;
+    height: 200px;
+    right: -5px;
+    bottom: 0;  
+}

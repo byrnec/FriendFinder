@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Click Button with Firebase!</title>
+
+    <!-- Firebase JavaScript Link -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+</head>
+
+<body>
+
+  <!-- -->
+  <h1>Ouch! You've clicked me
+    <span id="click-value"></span> times!</h1>
+
+  <!-- -->
+  <button id="click-button">Click Me!!!!</button>
+
+  <!-- -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- ================================================================================== -->
+  <script>
+
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDJbUvJwsTn896o_skPZRsWufcwWTx4OWE",
+    authDomain: "christie-first-project.firebaseapp.com",
+    databaseURL: "https://christie-first-project.firebaseio.com",
+    projectId: "christie-first-project",
+    storageBucket: "",
+    messagingSenderId: "287875802948"
+  };
+  firebase.initializeApp(config);
+
+    // VARIABLES
+    // --------------------------------------------------------------------------------
+
+    var database = firebase.database();
+    var clickCounter = 0;
+
+    // FUNCTIONS + EVENTS
+    // --------------------------------------------------------------------------------
+// on click of button
+    $("#click-button").on("click", function() {
+      // add to the click counter
+      clickCounter++;
+      // store slick data to firebase in a JSON property called click count
+      database.ref().set({
+        clickCount: clickCounter
+      });
+    });
+
+    // MAIN PROCESS + INITIAL CODE
+    // --------------------------------------------------------------------------------
+// this will store the data inside the variable "snapshot", we could rename 'snapshot' to anything
+    database.ref().on("value", function(snapshot) {
+
+
+      console.log(snapshot.val());
+
+      // then we change the html associated with the number
+      $("#click-value").text(snapshot.val().clickCount);
+
+      // then update the clickCounter variable 
+      clickCounter = snapshot.val().clickCount;
+    }, function(errorObject) {
+      console.log("The read failed: " + errorObject.code);
+    });
+
+  </script>
+
+</body>
+
+</html>

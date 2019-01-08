@@ -1,0 +1,26 @@
+body {
+    
+    font-family: 'K2D', sans-serif;
+    color: darkblue;
+    font-size: 28px;
+    background-image: url("/Users/carlabyrne/Desktop/InClassActivities/07-firebase-activities/01-todolist-nopersistence/Unsolved/profesh_beach.jpeg");
+    background-size: cover;
+}
+
+h1, form{
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 45px;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+div{
+    text-align: center;
+    width: 100%;
+}
+
+#todo-item {
+    font-weight: 700;
+    font-size: 20px;
+      }

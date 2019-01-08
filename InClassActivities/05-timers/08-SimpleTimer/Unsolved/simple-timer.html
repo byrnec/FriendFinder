@@ -1,0 +1,59 @@
+<!-- Simple Timer -->
+<!-- Students: Your work lies in the last script tag -->
+
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Simple Timer</title>
+
+  </head>
+
+  <body>
+
+      <h1>Timeouts!</h1>
+
+      <button id="window-cancel">Window Alert Cancel</button>
+  
+      <br>
+      <br>
+  
+      <button id="start">Button Timeout Start</button>
+      <button id="cancel">Button Timeout Cancel</button>
+
+    <div id="time-left"></div>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Script -->
+    <script src="simpleTimer.js"></script>
+    <!-- Script -->
+    <script>
+
+ //  Variable that will hold the button alert's timeout when it is clicked.
+ var delayButtonAlert;
+
+  //  Timeouts in JavaScript
+      //  Set our window alert to run 15 seconds after the function's called.
+      var windowTimeout = setTimeout(function() {
+        alert("Alert #1: Called automatically 1 second after page load.");
+
+        // plays a sound a
+      }, 15000);
+
+
+
+// * Have it send an alert when 5 seconds has passed, 10 seconds has passed and when the time is up.
+
+
+  
+    </script>
+
+  </body>
+
+</html>
+

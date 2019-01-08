@@ -1,0 +1,34 @@
+{
+	"folders": [
+		{
+			"path": "node"
+		},
+		{
+			"path": "node-continued"
+		},
+		{
+			"path": "2018-12-06"
+		},
+		{
+			"path": "/Users/carlabyrne/Desktop/code-drills/09-node-code-drills"
+		},
+		{
+			"path": "Constructors"
+		},
+		{
+			"path": "10-JS"
+		},
+		{
+			"path": "callbacks_mySQL"
+		},
+		{
+			"path": "/Users/carlabyrne/Desktop/code-drills/11-mySQL-code-drills"
+		},
+		{
+			"path": "SQL_node"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

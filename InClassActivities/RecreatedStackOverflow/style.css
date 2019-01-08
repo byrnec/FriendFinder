@@ -1,0 +1,17 @@
+.old-hero {
+    position: relative;
+    color: #FFF;
+    background-color: #117bf3;
+    background-image: url(http://cdn.sstatic.net/img/hero/pattern.svg?v=13ca42e6c21d),linear-gradient(to right, #126CFA 0%, #108AEC 100%);
+    background-position: right center, center center;
+}
+
+.Google {
+    background-color: white;
+    color: gray
+
+}
+
+.Facebook{
+color:darkblue;
+}

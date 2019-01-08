@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Closure</title>
+</head>
+<body>
+  <h2>Check console to see the madness!</h2>
+
+  <script>
+    var cat = {
+      name: "Gus",
+      color: "gray",
+      age: 15,
+
+      printInfo: function() {
+        console.log("inside printInfo()"); 
+        // this will print the object
+
+        // What will this print?
+        console.log(this); //refers to this object--> CAT
+
+        // What will this print? (Name: gus color: gray, age: 15")
+        console.log("Name:", this.name, "Color:", this.color, "Age:", this.age);
+
+        var thisRef = this; //this sets our this out here to a new variavles called this!!! kind of a cool way to do this
+
+        var nestedFunction = function() {
+
+    
+          console.log("inside nestedFunction()");
+
+          // What will this print?
+          console.log(thisRef); //"window" //we've lost track of the parent element which is the cat. //this now refers to the window and looks for a variable of age or
+          //window looks for age or color//we can resolve this by writing cat.name . kind of a cheat bc its pointing directly where it has to go
+          // look up to thisRef=this
+
+          // What will this print?
+          console.log("Name:", thisRef.name, "Color:", thisRef.color, "Age:", thisRef.age);
+        };
+
+        nestedFunction();
+      }
+    };
+
+    // calls the printInfo function. Which subsequently calls the nestedFunction()
+    cat.printInfo(); //THE CAT EXECUTED THE FUNCTION!!! 
+
+</script>
+
+</body>
+</html>

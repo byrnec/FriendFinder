@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Content!</title>
+  <script src="jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+
+  <h1>Drink Selection!</h1>
+  <hr>
+
+  <div id="drink-options"></div>
+
+  <script type="text/javascript">
+
+    var drinkList = [
+      "Coffee: $5",
+      "Espresso: $7",
+      "Cappuccino: $6",
+      "Latte: $4",
+      "Tea: $3",
+      "Ice Coffee: $6",
+      "Ice Espresso: $8",
+      "Ice Latte: $6",
+      "Ice Tea: $4"
+    ];
+
+    // Using JavaScript programmatically append each drinkList item to the "drink-options" div
+    // HINT: you will need a for loop to go over each element in the list
+
+
+    // jQuery alternative to: var newDiv = document.createElement("div");
+    var newDiv = $("<drinkDiv>");
+
+
+
+    for (var i = 0; i < drinkList.length; i++) {
+      console.log(drinkList[i]);
+
+      var drinkP = $("<p>");
+      drinkP.text(drinkList[i]);
+
+      // jQuery alternative to: document.querySelector("#empty-div").appendChild(newDiv);
+      $("#drink-options").append(drinkP)
+
+
+      // If we need to apply some CSS, we can quickly do so, using the jQuery ".attr" method.
+      drinkDiv.attr("class", "fancy");
+}
+  </script>
+
+</body>
+
+</html>

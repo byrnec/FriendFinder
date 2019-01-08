@@ -1,0 +1,134 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> TRIVIA
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    
+</head>
+
+<body>
+
+    <h1>Question Game</h1>
+    <p>Press t or f to answer the question!</p>
+    <div id="score"></div>
+    <div id="question"></div>
+
+
+    <script>
+
+
+
+            //create an array with 10 question objects
+    
+            var q1 = {
+                q: "Am I named Christie",
+                a: "t",
+            };
+    
+            var q2 = {
+                q: "Do I live in San Francisco?",
+                a: "t",
+            };
+    
+            var q3 = {
+                q: "Do I have 6 cats?",
+                a: "f",
+            };
+            var q4 = {
+                q: "Do I have a dog",
+                a: "f",
+            };
+            var q5 = {
+                q: "Do I bike to class?",
+                a: "t",
+            };
+            var q6 = {
+                q: "Do I enjoy running?",
+                a: "t",
+            };
+            var q7 = {
+                q: "Am I good at skiing?",
+                a: "f",
+            };
+            var q8 = {
+                q: "Do I make a mean birthday cake?",
+                a: "t",
+            };
+            var q9 = {
+                q: "Do I have two brothers?",
+                a: "t",
+            };
+            var q10 = {
+                q: "Did I grow up in Alabama?",
+                a: "f",
+            };
+            
+
+            var score = 0;
+            var questions = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
+            var questionCount = 0;
+            //when the page loads
+            appendScoreToPage()
+            appendQuestionToPage()
+            
+            // console.log(questions)
+    
+            function alertCorrect() {
+                alert("You are correct!");
+            }
+    
+            function alertIncorrect() {
+                alert("You are incorrect!");
+    
+            }
+    
+            //append to page
+            function appendQuestionToPage(){
+                var scoreQuestion = document.getElementById("question");
+                scoreQuestion.textContent = "Question: " + questions[questionCount].q;
+            }
+                
+            
+            function appendScoreToPage(){
+                var scoreDiv = document.getElementById("score");
+                scoreDiv.textContent = "Score: " + score;
+            }
+            
+
+
+            // The user must answer by hitting t (for true) or f (for false).
+            document.onkeyup = function (event) {
+    
+                
+                // console.log("hello");
+    
+                // Determines which key was pressed.
+                var keyPressed = event.key;
+                // console.log(answer);
+                // console.log(event);
+                // write a for loop that cycles through all 10 question-objects
+               
+    
+                if (keyPressed === "t") {
+                    // console.log("t was pressed");
+                    alertCorrect();
+                }
+    
+                else if (keyPressed === "f") {
+                    // console.log("f was pressed");
+                    alertIncorrect();
+                }
+    
+                // check against Questions[questionCount].a
+
+                
+            }
+        </script>
+</body>
+
+</html>

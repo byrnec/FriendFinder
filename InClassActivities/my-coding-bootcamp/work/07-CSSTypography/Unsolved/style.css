@@ -1,0 +1,25 @@
+h1, h2, h3, h4 p{
+    font-family: 'Poor Story', cursive;
+}
+
+.bold{
+    font-weight: bold;
+    color: red;
+    font-family: 'Poor Story', cursive;
+    font-size: large;
+    
+}
+
+.enlarge{
+    font-size: 30px;
+    background-color: purple;
+    font-family: 'Mali', cursive;
+
+}
+
+.lineheight{
+    line-height: 50px;
+    font-family: 'Inconsolata', monospace;
+    font-size: x-large
+}
+

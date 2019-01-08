@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Conditional Demo 2</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      // these are the same thing explicitly
+      if (true === true) {
+        alert("hi");
+      }
+      else {
+        alert("bye");
+      }
+
+      //same thing 
+      if (false === false) {
+        alert("dude");
+      }
+      else {
+        alert("nope");
+      }
+
+      // same value but different data type
+      if ("4" === 4) {
+        alert("puppies");
+      }
+      else {
+        alert("goats");
+      }
+
+      // not the same data type
+      if ("4" == 4) {
+        alert("puppies");
+      }
+      else {
+        alert("goats");
+      }
+
+      // it is true
+      if (true) {
+        alert("goo goo dolls");
+      }
+      else {
+        alert("vanilla ice");
+      }
+
+      //alert one direction--checking for EXPLICIT values---this is uncommon but good to practice
+      if (false) {
+        alert("the neighborhood");
+      }
+      else {
+        alert("one direction");
+      }
+    //
+      if (("5" + "5") === "55") {
+        alert("tofu");
+      }
+      else {
+        alert("soybean");
+      }
+      
+      // richard is alerted-
+      if ((6 + "5") === "65") {
+        alert("richard");
+      }
+      else {
+        alert("branson");
+      }
+
+    </script>
+
+  </body>
+</html>
